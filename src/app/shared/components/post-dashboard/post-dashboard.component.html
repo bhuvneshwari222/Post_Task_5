@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <app-post-form
+        (emitNewPost)="getNewPost($event)"
+        (emitUpdatedPost)="getUpdatedPost($event)"
+        [getEditPost]="editPostObj"
+        ></app-post-form>
+    </div>
+</div>
+<app-post-card
+(emitRemoveID)="getRemoveID($event)"
+(emitEditPost)="getEditPost($event)"
+[getPostArr]="postArr"
+></app-post-card>
